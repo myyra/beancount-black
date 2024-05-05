@@ -376,6 +376,13 @@ def test_format_price(formatter: Formatter, tree: Tree, expected_result: str):
             ),
             "{*}",
         ),
+        (
+            Tree[Token](
+                "cost_spec",
+                [],
+            ),
+            "{}",
+        ),
     ],
 )
 def test_format_cost(formatter: Formatter, tree: Tree, expected_result: str):
